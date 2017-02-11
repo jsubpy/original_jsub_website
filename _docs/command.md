@@ -1,8 +1,8 @@
 ---
-title: Quick Start
+title: Command
 ---
 
-Quick start.
+Command.
 
 ## Section 1
 

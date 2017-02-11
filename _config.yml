@@ -26,3 +26,4 @@ exclude:
   - Gemfile.lock
   - TODO
   - LICENSE
+  - README.md
