@@ -1,66 +1,70 @@
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
 
-  <title>{{ page.title }} | {{ site.title }}</title>
+    <title>{{ site.name - page.title }}</title>
+    <meta property="st:title" content="<%= current_page.data.title || full_page_title %>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= favicon_tag 'images/favicon.png' %>
+    <!--[if lte IE 7 ]><%= stylesheet_link_tag "fonts/fontello-ie7" %><![endif]-->
+    <%= stylesheet_link_tag "application" %>
 
-  <link rel="stylesheet" href="/css/theme.css" type="text/css" />
+    <!-- This TypeKit account is managed by @wifelette. Contact her with any issues. -->
+    <script src="https://use.typekit.net/stz3kpn.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <link href="/blog/feed.xml" rel="alternate" type="application/atom+xml" title="Ember.js - Blog" />
+    <%= yield_content :head %>
+  </head>
 
-</head>
+  <body class="guides <%= page_classes %>">
 
-<body class="wy-body-for-nav" role="document">
+    <!--[if lt IE 9]>
+      <%= javascript_include_tag 'common-old-ie' %>
+    <![endif]-->
+    <!--[if gte IE 9]><!-->
+      <%= javascript_include_tag 'common-modern' %>
+    <!--<![endif]-->
 
-  <div class="wy-grid-for-nav">
+    <%= partial "header" %>
 
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
-          <a href="/" class="icon icon-home"> {{ site.name }}</a>
-        </div>
+    <%= yield_content :outside_wrapper %>
 
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          {% include toc.html %}
-        </div>
-      </div>
-    </nav>
+    <main class="container">
+      <%= partial "sidebar" %>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <article class="chapter">
+        <h1>
+          <%= page_title %>
+          <a href="https://github.com/emberjs/guides/edit/master/source/localizable/<%= current_page.path.gsub('html', 'md') %>"
+             target="_blank" class="edit-page icon-pencil">Edit Page</a>
+        </h1>
+        <hr>
 
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="/">{{ site.name }}</a>
-      </nav>
+        <%= yield %>
 
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          {% comment %}
-          {% include breadcrumbs.html %}
-          {% endcomment %}
-          <div role="main" class="document">
-            {{ content }}
-          </div>
-          {% include footer.html %}
-        </div>
-      </div>
 
-    </section>
+        <%= chapter_links %>
+      </article>
+    </main>
 
-  </div>
+    <%= partial "footer" %>
 
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <%= yield_content :foot %>
 
-  <script type="text/javascript" src="/js/theme.js"></script>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+      _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+      _gaq.push(['_setAccount', 'UA-27675533-1']);
+      _gaq.push(['_trackPageview']);
 
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
-      });
-  </script>
-
-</body>
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </body>
 </html>
