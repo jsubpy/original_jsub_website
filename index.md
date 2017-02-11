@@ -1,6 +1,6 @@
 ---
 title: Index
-permalink: /index.html
+layout: home
 ---
 
 This is the index.

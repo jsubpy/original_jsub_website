@@ -1,0 +1,24 @@
+{% assign docs = site.data.toc | map: 'docs' | join: ',' | split: ',' %}
+
+<footer>
+  {% for document in docs %}
+    {% assign document_url = document | prepend:"/" | append:"/" %}
+    {% if document_url == page.url %}
+      {% if forloop.first %}
+      {% else %}
+        {% assign previous = forloop.index0 | minus: 1 %}
+        {% assign previous_page = docs[previous] | prepend:"/" | append:"/" %}
+        {% assign p = site.docs | where:"url", previous_page | first %}
+        <a href="{{ previous_page }}" class="previous-guide">{{ p.title }}</a>
+      {% endif %}
+      {% if forloop.last %}
+      {% else %}
+        {% assign next = forloop.index0 | plus: 1 %}
+        {% assign next_page = docs[next] | prepend:"/" | append:"/" %}
+        {% assign p = site.docs | where:"url", next_page | first %}
+        <a href="{{ next_page }}" class="next-guide">{{ p.title }}</a>
+      {% endif %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+</footer>

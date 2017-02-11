@@ -16,7 +16,7 @@ defaults:
       path: _docs
       type: docs
     values:
-      layout: docs
+      layout: doc
 
 #sass:
 #  style: compressed
