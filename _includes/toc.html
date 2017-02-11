@@ -1,0 +1,8 @@
+<ol class="toc-level-0">
+{% for section in site.data.toc %}
+  <li class="toc-level-0">
+    <a href="#">{{ section.title }}</a>
+    {% include toc_section.html items=section.docs %}
+  </li>
+{% endfor %}
+</ol>

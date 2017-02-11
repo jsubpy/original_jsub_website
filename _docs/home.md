@@ -1,9 +1,6 @@
 ---
 title: First Doc
-layout: default
 ---
-
-# This is my first doc.
 
 fjdlksj fjdsalkfj jaskfl dsakl jfdsalj fdsjaf lsa
 fjkdsalfj s
@@ -11,7 +8,7 @@ fjdlas f
 
 fjkdls
 
-## jflkajflkjdflks
+## Section 1
 
 fjkldajflkdsja 
 fjdklsajf lds
@@ -25,3 +22,7 @@ int main() {
   return 0;
 }
 ```
+
+## Section 2
+
+fjkslajflkdsj

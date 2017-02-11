@@ -1,5 +1,6 @@
 name: "JSUB"
-title: "JSUB ~ Job Submission Utility Bundle"
+title: "JSUB"
+description: "Job Submission Utility Bundle"
 
 encoding: utf-8
 timezone: Asia/Shanghai
@@ -17,6 +18,11 @@ defaults:
     values:
       layout: docs
 
+#sass:
+#  style: compressed
+
 exclude:
   - Gemfile
   - Gemfile.lock
+  - TODO
+  - LICENSE
