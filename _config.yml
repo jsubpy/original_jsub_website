@@ -1,0 +1,22 @@
+name: "JSUB"
+title: "JSUB ~ Job Submission Utility Bundle"
+
+encoding: utf-8
+timezone: Asia/Shanghai
+
+collections:
+  docs:
+    permalink: /:path/
+    output: true
+
+defaults:
+  -
+    scope:
+      path: _docs
+      type: docs
+    values:
+      layout: docs
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
