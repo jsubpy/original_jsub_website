@@ -7,7 +7,10 @@ timezone: Asia/Shanghai
 
 collections:
   docs:
-    permalink: /:path/
+    permalink: /docs/:path/
+    output: true
+  exts:
+    permalink: /exts/:path/
     output: true
 
 defaults:
@@ -16,7 +19,13 @@ defaults:
       path: _docs
       type: docs
     values:
-      layout: doc
+      layout: docs
+  -
+    scope:
+      path: _exts
+      type: exts
+    values:
+      layout: exts
 
 #sass:
 #  style: compressed

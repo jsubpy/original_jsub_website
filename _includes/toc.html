@@ -5,7 +5,7 @@
 
     {% assign selected = false %}
     {% for item in section.docs %}
-      {% assign item_url = item | prepend: "/" | append:"/" %}
+      {% assign item_url = item | prepend: "/docs/" | append:"/" %}
       {% if item_url == page.url %}
         {% assign selected = true %}
       {% endif %}
@@ -13,7 +13,7 @@
 
     <ol class="toc-level-1{% if selected %} selected{% endif %}">
       {% for item in section.docs %}
-        {% assign item_url = item | prepend: "/" | append:"/" %}
+        {% assign item_url = item | prepend: "/docs/" | append:"/" %}
         {% assign p = site.docs | where:"url", item_url | first %}
         <li class="toc-level-1{% if item_url == page.url %} selected{% endif %}">
           <a href="{{ p.url }}">{{ p.title }}</a>
