@@ -1,16 +1,16 @@
 - title: Getting Started
-  docs:
+  pages:
     - home
     - quickstart
     - install
     - first
 
 - title: Basic Usage
-  docs:
+  pages:
     - profile
     - command
     - api
 
 - title: Development Guide
-  docs:
+  pages:
     - extension

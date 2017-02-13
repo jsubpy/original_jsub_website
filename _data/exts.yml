@@ -1,0 +1,9 @@
+- title: CEPC
+  pages:
+    - cepc/quickstart
+    - cepc/components
+
+- title: BESIII
+  pages:
+    - bes3/quickstart
+    - bes3/components

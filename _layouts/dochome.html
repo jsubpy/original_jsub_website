@@ -6,19 +6,4 @@ layout: docs
 
 <h3 id='documentation-contents'>Documentation Contents</h3>
 
-<ul>
-{% for section in site.data.toc %}
-  <li>
-    {{ section.title }}
-    <ul>
-      {% for item in section.docs %}
-        {% assign item_url = item | prepend: "/docs/" | append:"/" %}
-        {% assign p = site.docs | where:"url", item_url | first %}
-        <li>
-          <a href="{{ p.url }}">{{ p.title }}</a>
-        </li>
-      {% endfor %}
-    </ul>
-  </li>
-{% endfor %}
-</ul>
+{% include toc_list.html toc=site.data.docs cols=site.docs path="docs" %}
