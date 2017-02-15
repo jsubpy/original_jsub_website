@@ -27,8 +27,8 @@ defaults:
     values:
       layout: exts
 
-#sass:
-#  style: compressed
+sass:
+  style: compressed
 
 exclude:
   - Gemfile
