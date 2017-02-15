@@ -2,6 +2,8 @@
 title: Home of Doc
 ---
 
+Home of Doc
+
 fjdlksj fjdsalkfj jaskfl dsakl jfdsalj fdsjaf lsa
 fjkdsalfj s
 fjdlas f
@@ -27,7 +29,7 @@ fjdklsajf lds
 jfj
 
 
-fjkslajflkdsj
+fjkslajflkdsj `inline code` here
 
 ```c
 #include <iostream>

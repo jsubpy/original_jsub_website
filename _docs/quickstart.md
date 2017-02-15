@@ -4,14 +4,14 @@ title: Quick Start
 
 Quick start.
 
-## Section 1
+## Installation
 
-```c
-int main() {
-  return 0;
-}
+```shell
+pip install jsub
 ```
 
-## Section 2
+## Configuration
 
-Good.
+```shell
+jsub default-config > ~/.jsubrc
+```
