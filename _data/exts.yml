@@ -1,5 +1,6 @@
 - title: CEPC
   pages:
+    - cepc
     - cepc/quickstart
     - cepc/components
 

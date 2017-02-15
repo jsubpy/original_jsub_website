@@ -1,7 +1,7 @@
 ---
 title: Documents
 layout: dochome
-permalink: /docs/index.html
+permalink: /docs/
 ---
 
 This is the doc index.

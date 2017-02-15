@@ -1,7 +1,7 @@
 ---
 title: Extensions
 layout: exthome
-permalink: /exts/index.html
+permalink: /exts/
 ---
 
 This is the extension index.
